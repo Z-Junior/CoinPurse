@@ -11,8 +11,7 @@ public class CoinPurse
      */
     public CoinPurse()
     {
-      //implementation needed
-        
+        purse = new ArrayList<>();
     }
 
     /**
@@ -20,7 +19,7 @@ public class CoinPurse
      */
     public void addCoin(Coin c)
     {
-       //implementation needed
+        purse.add(c);
     }
     
     /**
@@ -28,7 +27,7 @@ public class CoinPurse
      */
     public void removeCoin(Coin c)
     {
-       //implementation needed
+        purse.remove(c);
     }
     
     /**
@@ -36,17 +35,22 @@ public class CoinPurse
      */
     public int count()
     {
-       //implementation needed
-       
+        return purse.size();
     }
     
     /**
      *returns the total values of all coins in the CoinPurse
      */
     public double total() 
-    { 
-           //implementation needed
-    } 
+    {
+        double fTotal = 0.0;
+
+        for (int i = 0; i < this.purse.size(); i++)
+            fTotal += this.purse.get(i).getValue();
+
+        return fTotal / 100.0;
+    }
+
     /**
      *Prints the vName of each Coin stored in the CoinPurse 
      */

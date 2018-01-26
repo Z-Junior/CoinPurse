@@ -3,14 +3,22 @@ public class MyPurse
     public static void main(String[] args)
     {
         CoinPurse mine = new CoinPurse();
-        
-        //Instantiate some coin objects and add them to CoinPurse mine
-      
-	    //Count the total number of Coins in the CoinPurse
-	   
-	    //Total the Coin in the CoinPurse
-       
-        //Print the CoinPurse
+
+        Coin c1 = new Coin(1);
+        Coin c5 = new Coin(5);
+        Coin c6 = new Coin(10);
+        Coin c7 = new Coin(25);
+        Coin c8 = new Coin(25);
+
+        mine.addCoin(c1);
+        mine.addCoin(c5);
+        mine.addCoin(c6);
+        mine.addCoin(c7);
+        mine.addCoin(c8);
+
+        System.out.println(mine.count());
+        System.out.println("$" + mine.total());
+        System.out.println(mine);
       
     }
 }
